@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89CE24E0-1299-4091-B7C1-A4005EA06B12}</ProjectGuid>
+    <ProjectGuid>{5EC5DE3A-E52A-41B3-9EDA-6ADFC55CAF96}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PopulationCounter</RootNamespace>
-    <AssemblyName>PopulationCounter</AssemblyName>
+    <RootNamespace>SquaresInMatrix</RootNamespace>
+    <AssemblyName>SquaresInMatrix</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PopulationCounter.cs" />
+    <Compile Include="SquaresInMatrix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89CE24E0-1299-4091-B7C1-A4005EA06B12}</ProjectGuid>
+    <ProjectGuid>{9D079F84-24A0-408A-81CC-72D78A51D93B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PopulationCounter</RootNamespace>
-    <AssemblyName>PopulationCounter</AssemblyName>
+    <RootNamespace>RubiksMatrix</RootNamespace>
+    <AssemblyName>RubiksMatrix</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PopulationCounter.cs" />
+    <Compile Include="RubiksMatrix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

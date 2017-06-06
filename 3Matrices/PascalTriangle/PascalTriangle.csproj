@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89CE24E0-1299-4091-B7C1-A4005EA06B12}</ProjectGuid>
+    <ProjectGuid>{BBC8C53F-5666-492D-AB06-39DD3A623305}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PopulationCounter</RootNamespace>
-    <AssemblyName>PopulationCounter</AssemblyName>
+    <RootNamespace>PascalTriangle</RootNamespace>
+    <AssemblyName>PascalTriangle</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PopulationCounter.cs" />
+    <Compile Include="PascalTriangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

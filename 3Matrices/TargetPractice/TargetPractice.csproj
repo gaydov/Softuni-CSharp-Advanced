@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89CE24E0-1299-4091-B7C1-A4005EA06B12}</ProjectGuid>
+    <ProjectGuid>{FCACB64E-365A-412B-8942-5D075D7583CB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PopulationCounter</RootNamespace>
-    <AssemblyName>PopulationCounter</AssemblyName>
+    <RootNamespace>TargetPractice</RootNamespace>
+    <AssemblyName>TargetPractice</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PopulationCounter.cs" />
+    <Compile Include="TargetPractice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
