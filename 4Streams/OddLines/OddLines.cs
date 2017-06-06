@@ -6,11 +6,11 @@ namespace OddLines
     public class OddLines
     {
         // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\OddLines)
-        const string filePath = "../../source.txt";
+        private const string FilePath = "../../source.txt";
 
         public static void Main()
         {
-            StreamReader reader = new StreamReader(filePath);
+            StreamReader reader = new StreamReader(FilePath);
 
             using (reader)
             {

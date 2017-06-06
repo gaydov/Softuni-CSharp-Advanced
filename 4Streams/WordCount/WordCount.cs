@@ -9,16 +9,16 @@ namespace WordCount
     {
         // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\WordCount)
 
-        const string wordsFilePath = "../../words.txt";
-        const string textFilePath = "../../text.txt";
-        const string resultFilePath = "../../results.txt";
+        private const string WordsFilePath = "../../words.txt";
+        private const string TextFilePath = "../../text.txt";
+        private const string ResultFilePath = "../../results.txt";
 
         public static void Main()
         {
             Dictionary<string, int> wordsCounts = new Dictionary<string, int>();
             List<string> words = new List<string>();
 
-            using (StreamReader wordsReader = new StreamReader(wordsFilePath))
+            using (StreamReader wordsReader = new StreamReader(WordsFilePath))
             {
                 string currentWord = wordsReader.ReadLine();
                 while (currentWord != null)
@@ -28,7 +28,7 @@ namespace WordCount
                 }
             }
 
-            using (StreamReader textReader = new StreamReader(textFilePath))
+            using (StreamReader textReader = new StreamReader(TextFilePath))
             {
                 char[] delimiters = " .,-!?:;".ToCharArray();
                 string line = textReader.ReadLine();
@@ -59,7 +59,7 @@ namespace WordCount
                 }
             }
 
-            using (StreamWriter writer = new StreamWriter(resultFilePath))
+            using (StreamWriter writer = new StreamWriter(ResultFilePath))
             {
                 foreach (KeyValuePair<string, int> pair in wordsCounts.OrderByDescending(p => p.Value))
                 {

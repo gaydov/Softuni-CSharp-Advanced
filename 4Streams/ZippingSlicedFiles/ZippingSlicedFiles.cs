@@ -9,9 +9,9 @@ namespace ZippingSlicedFiles
     {
         // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\ZippingSlicedFiles)
 
-        private const string filePath = "../../waterfall.jpg";
-        private const string splitFilesDir = "../../Split compressed parts/";
-        private const string assembledFilePath = "../../waterfall decompressed.jpg";
+        private const string FilePath = "../../waterfall.jpg";
+        private const string SplitFilesDir = "../../Split compressed parts/";
+        private const string AssembledFilePath = "../../waterfall decompressed.jpg";
 
         public static void Main()
         {
@@ -22,22 +22,22 @@ namespace ZippingSlicedFiles
             List<string> splitFilesPaths = new List<string>();
 
             // If already exist, deleting the assembled file and the directory where the split files will be
-            if (Directory.Exists(Path.GetDirectoryName(splitFilesDir)))
+            if (Directory.Exists(Path.GetDirectoryName(SplitFilesDir)))
             {
-                Directory.Delete(Path.GetDirectoryName(splitFilesDir), true);
+                Directory.Delete(Path.GetDirectoryName(SplitFilesDir), true);
             }
 
-            if (File.Exists(assembledFilePath))
+            if (File.Exists(AssembledFilePath))
             {
-                File.Delete(assembledFilePath);
+                File.Delete(AssembledFilePath);
             }
 
-            Split(filePath, splitFilesDir, partsCount, splitFilesPaths);
+            Split(FilePath, SplitFilesDir, partsCount, splitFilesPaths);
 
             Console.WriteLine("{0}The file was split and the parts compressed. Please press any key to continue with assemble...", Environment.NewLine);
             Console.ReadKey();
 
-            Assemble(splitFilesPaths, assembledFilePath);
+            Assemble(splitFilesPaths, AssembledFilePath);
 
             Console.WriteLine("{0}The file was decompressed and assembled.{0}", Environment.NewLine);
         }
