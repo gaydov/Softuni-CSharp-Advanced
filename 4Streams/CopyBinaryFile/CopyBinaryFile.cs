@@ -5,15 +5,16 @@ namespace CopyBinaryFile
 {
     public class CopyBinaryFile
     {
+        // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\CopyBinaryFile)
+
+        private const string sourceFilePath = "../../Penguins.jpg";
+        private const string destinationFilePath = "../../Penguins-copy.jpg";
+
         public static void Main()
         {
-            // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\CopyBinaryFile)
-            const string sourceFilePath = "../../Penguins.jpg";
-            const string destinationFilePath = "../../Penguins-copy.jpg";
-
-            using (var sourceStream = new FileStream(sourceFilePath, FileMode.Open) )
+            using (FileStream sourceStream = new FileStream(sourceFilePath, FileMode.Open))
             {
-                using (var destinationStream = new FileStream(destinationFilePath, FileMode.Create))
+                using (FileStream destinationStream = new FileStream(destinationFilePath, FileMode.Create))
                 {
                     byte[] buffer = new byte[4096];
                     while (true)

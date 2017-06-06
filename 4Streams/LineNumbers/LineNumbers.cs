@@ -5,13 +5,13 @@ namespace LineNumbers
 {
     public class LineNumbers
     {
+        // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\LineNumbers)
+
+        const string filePathSource = "../../source.txt";
+        const string filePathTarget = "../../destination.txt";
+
         public static void Main()
         {
-            // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\LineNumbers)
-
-            const string filePathSource = "../../source.txt";
-            const string filePathTarget = "../../destination.txt";
-
             using (StreamReader reader = new StreamReader(filePathSource))
             {
                 using (StreamWriter writer = new StreamWriter(filePathTarget))

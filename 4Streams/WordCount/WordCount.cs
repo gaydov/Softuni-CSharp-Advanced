@@ -7,13 +7,14 @@ namespace WordCount
 {
     public class WordCount
     {
+        // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\WordCount)
+
+        const string wordsFilePath = "../../words.txt";
+        const string textFilePath = "../../text.txt";
+        const string resultFilePath = "../../results.txt";
+
         public static void Main()
         {
-            // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\WordCount)
-
-            const string wordsFilePath = "../../words.txt";
-            const string textFilePath = "../../text.txt";
-            const string resultFilePath = "../../results.txt";
             Dictionary<string, int> wordsCounts = new Dictionary<string, int>();
             List<string> words = new List<string>();
 

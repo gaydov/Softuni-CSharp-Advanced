@@ -1,40 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Remoting.Channels;
 
 namespace SlicingFile
 {
     public class SlicingFile
     {
+        private const string FilePath = "../../waterfall.jpg";
+        private const string SplitFile = "../../Split parts/";
+        private const string AssembledFilePath = "../../assembled.jpg";
+
         public static void Main()
         {
             // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\SlicingFile)
 
             Console.Write("Parts count: ");
             int partsCount = int.Parse(Console.ReadLine());
-            string filePath = "../../waterfall.jpg";
-            string splitFile = "../../Split parts/";
-            string assembledFilePath = "../../assembled.jpg";
-
             List<string> slicedFilesPaths = new List<string>();
 
             // If already exist, deleting the assembled file and the directory where the split files will be
-            if (Directory.Exists(Path.GetDirectoryName(splitFile)))
+            if (Directory.Exists(Path.GetDirectoryName(SplitFile)))
             {
-                Directory.Delete(Path.GetDirectoryName(splitFile), true);
+                Directory.Delete(Path.GetDirectoryName(SplitFile), true);
             }
 
-            if (File.Exists(assembledFilePath))
+            if (File.Exists(AssembledFilePath))
             {
-                File.Delete(assembledFilePath);
+                File.Delete(AssembledFilePath);
             }
 
-            Split(filePath, splitFile, partsCount, slicedFilesPaths);
+            Split(FilePath, SplitFile, partsCount, slicedFilesPaths);
 
             Console.WriteLine("{0}The file was split. Please press any key to continue with assemble...", Environment.NewLine);
             Console.ReadKey();
 
-            Assemble(slicedFilesPaths, assembledFilePath);
+            Assemble(slicedFilesPaths, AssembledFilePath);
 
             Console.WriteLine("{0}The file was assembled.{0}", Environment.NewLine);
         }

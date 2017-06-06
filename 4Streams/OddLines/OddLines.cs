@@ -5,11 +5,11 @@ namespace OddLines
 {
     public class OddLines
     {
+        // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\OddLines)
+        const string filePath = "../../source.txt";
+
         public static void Main()
         {
-            // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\OddLines)
-
-            const string filePath = "../../source.txt"; ;
             StreamReader reader = new StreamReader(filePath);
 
             using (reader)
@@ -27,7 +27,7 @@ namespace OddLines
                     lineNumber++;
                 }
             }
-            Console.WriteLine("{0}Done.{0}", Environment.NewLine);
+            Console.WriteLine();
         }
     }
 }

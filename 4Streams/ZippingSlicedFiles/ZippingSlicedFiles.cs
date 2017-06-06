@@ -7,15 +7,17 @@ namespace ZippingSlicedFiles
 {
     public class ZippingSlicedFiles
     {
+        // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\ZippingSlicedFiles)
+
+        private const string filePath = "../../waterfall.jpg";
+        private const string splitFilesDir = "../../Split compressed parts/";
+        private const string assembledFilePath = "../../waterfall decompressed.jpg";
+
         public static void Main()
         {
-            // The files should be put in the project's directory (e.g. D:\Softuni2\CSharp fundamentals\Streams\ZippingSlicedFiles)
 
             Console.Write("Parts count: ");
             int partsCount = int.Parse(Console.ReadLine());
-            string filePath = "../../waterfall.jpg";
-            string splitFilesDir = "../../Split compressed parts/";
-            string assembledFilePath = "../../waterfall decompressed.jpg";
 
             List<string> splitFilesPaths = new List<string>();
 
