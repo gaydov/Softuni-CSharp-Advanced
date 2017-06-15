@@ -22,7 +22,6 @@ namespace ThePartyReservationFilterModule
                 string command = args[0];
                 string filterType = args[1];
                 string parameter = args[2];
-
                 ApplyFiltering(guestsList, beforeFiltering, command, filterType, parameter);
 
                 input = Console.ReadLine();
@@ -107,7 +106,7 @@ namespace ThePartyReservationFilterModule
                 foreach (string person in toBeAddedBack)
                 {
                     int index = beforeFiltering.LastIndexOf(person);
-                    guestsList.Insert(index, person);
+                    guestsList[index] = person;
                 }
             }
         }
