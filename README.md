@@ -19,7 +19,7 @@ The course covers:
 2. [Sets and Dictionaries](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/2SetsAndDictionaries)
 3. [Matrices](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/3Matrices)
 4. [Streams](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/4Streams)
-5. [Manual string procesing](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/5ManualStringProcessing)
+5. [Manual string processing](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/5ManualStringProcessing)
 6. [RegEx](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/6RegEx)
 7. [Functional programming](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/7FunctionalProgramming)
 8. [LINQ](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/8LINQ)
