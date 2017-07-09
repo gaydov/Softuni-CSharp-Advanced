@@ -4,9 +4,9 @@ using BashSoft.StaticData;
 
 namespace BashSoft.SimpleJudge
 {
-    public static class Tester
+    public class Tester
     {
-        public static void CompareContent(string firstPath, string secondPath)
+        public void CompareContent(string firstPath, string secondPath)
         {
             try
             {
@@ -23,16 +23,13 @@ namespace BashSoft.SimpleJudge
                 PrintOutput(mismatches, hasMismatch, mismatchesPath);
                 OutputWriter.WriteMessageOnNewLine("Files read!");
             }
-            catch (Exception exception)
+            catch (IOException ioEx)
             {
-                if (exception is FileNotFoundException || exception is DirectoryNotFoundException)
-                {
-                    OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
-                }
+                Console.WriteLine(ioEx.Message);
             }
         }
 
-        private static void PrintOutput(string[] mismatches, bool hasMismatch, string mismatchesPath)
+        private void PrintOutput(string[] mismatches, bool hasMismatch, string mismatchesPath)
         {
             if (hasMismatch)
             {
@@ -40,21 +37,15 @@ namespace BashSoft.SimpleJudge
                 {
                     OutputWriter.WriteMessageOnNewLine(line);
                 }
-                try
-                {
-                    File.WriteAllLines(mismatchesPath, mismatches);
-                }
-                catch (DirectoryNotFoundException)
-                {
-                    OutputWriter.DisplayException(ExceptionMessages.InvalidPath);
-                }
+
+                File.WriteAllLines(mismatchesPath, mismatches);
                 return;
             }
 
             OutputWriter.WriteMessageOnNewLine("Files are identical. There are no mismatches.");
         }
 
-        private static string[] GetLineWithPossibleMismatches(string[] actualOutputLines, string[] expectedOutputLines, out bool hasMismatch)
+        private string[] GetLineWithPossibleMismatches(string[] actualOutputLines, string[] expectedOutputLines, out bool hasMismatch)
         {
             hasMismatch = false;
             string output = string.Empty;
@@ -93,7 +84,7 @@ namespace BashSoft.SimpleJudge
             return mismatches;
         }
 
-        private static string GetMismatchPath(string expectedOutputPath)
+        private string GetMismatchPath(string expectedOutputPath)
         {
             int indexOf = expectedOutputPath.LastIndexOf("\\");
             string directoryPath = expectedOutputPath.Substring(0, indexOf);

@@ -2,11 +2,17 @@
 
 namespace BashSoft.IO
 {
-    public static class InputReader
+    public class InputReader
     {
+        private CommandInterpreter interpreter;
         private const string EndCommand = "quit";
 
-        public static void StartReadingCommands()
+        public InputReader(CommandInterpreter interpreter)
+        {
+            this.interpreter = interpreter;
+        }
+
+        public void StartReadingCommands()
         {
             OutputWriter.WriteMessage($"{SessionData.currentPath}> ");
             string input = Console.ReadLine();
@@ -14,7 +20,7 @@ namespace BashSoft.IO
 
             while (true)
             {
-                CommandInterpreter.InterpretCommand(input);
+                this.interpreter.InterpretCommand(input);
                 OutputWriter.WriteMessage($"{SessionData.currentPath}> ");
                 input = Console.ReadLine();
                 input = input.Trim();
