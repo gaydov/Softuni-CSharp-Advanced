@@ -24,8 +24,6 @@ The course covers:
 7. [Functional programming](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/7FunctionalProgramming)
 8. [LINQ](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/8LINQ)
 
-### [Tasks' descriptions](https://drive.google.com/drive/folders/0B0i5AcwcQwXJRkF4N25tdDBfemc)
-
 ## Exams
 
 * [Exam 19th June 2016](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/Exams/Exam-19th-June-2016)
