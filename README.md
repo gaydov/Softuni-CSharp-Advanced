@@ -29,5 +29,3 @@ The course covers:
 * [Exam 19th June 2016](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/Exams/Exam-19th-June-2016)
 * [Exam 22th Aug 2016](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/Exams/Exam-22th-Aug-2016)
 * [Sample Exam 13th June 2016](https://github.com/gaydov/Softuni-CSharp-Advanced/tree/master/Exams/Sample-Exam-13th-June-2016)
-
-### [Exams' descriptions](https://drive.google.com/drive/folders/0B0i5AcwcQwXJVjBOSlJOdUM0N1k)
